@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body >
+    <form method="POST" >
+
+    <h3>Input Type</h3>
+    <select name="inputlang">
+        <option value="ta">Tamil</option>
+        <option value="hi">Hindi</option>
+        <option value="en">English</option>
+    </select>
+
+    <h3>Enter Text</h3>
+    <textarea name="text"></textarea>
+
+    <h3>Target Language</h3>
+    <select name="outputlang">
+        <option value="ta">Tamil</option>
+        <option value="hi">Hindi</option>
+        <option value="en">English</option>
+    </select>
+
+    <br><br>
+    <button type="submit">Convert</button>
+    {% if outputvoice %}
+        <h3>Translated Text:</h3>
+        <p>{{ outputvoice }}</p>
+    {% endif %}
+
+    {% if audio_file %}
+        <h3>Audio:</h3>
+        <div class="audio-container">
+            <audio controls>
+                <source src="{{ audio_file }}" type="audio/mpeg">
+            </audio>
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    {% endif %}
+</form>
+</body>
+</html>

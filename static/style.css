@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+form {
+    padding: 25px;
+    border-radius: 10px;
+    background: white;
+    width: 350px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h3 {
+    text-align: left;
+}
+
+p {
+    text-align: center;
+}
+textarea {
+    width: 100%;
+    /* padding: 8px; */
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
